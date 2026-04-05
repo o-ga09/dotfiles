@@ -1,5 +1,0 @@
-# dorfiles
-
-## Zsh
-
-## Bash
