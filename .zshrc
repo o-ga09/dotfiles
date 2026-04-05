@@ -38,6 +38,18 @@ export PATH="$PATH:$ANDROID_HOME/platform-tools"
 # ─── TinyGo ───────────────────────────────────────────────────────────────────
 export PATH="$PATH:$HOME/.tinygo/bin"
 
+# ─── Vite+ ────────────────────────────────────────────────────────────────────
+[ -f "$HOME/.vite-plus/env" ] && . "$HOME/.vite-plus/env"
+
+# ─── Antigravity ──────────────────────────────────────────────────────────────
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+
+# ─── TiCloud CLI ──────────────────────────────────────────────────────────────
+export PATH="$PATH:$HOME/.ticloud/bin"
+
+# ─── Local bin ────────────────────────────────────────────────────────────────
+export PATH="$HOME/.local/bin:$PATH"
+
 # ─── Aliases ──────────────────────────────────────────────────────────────────
 alias ls='ls -FG'
 alias ll='ls -alFh'
