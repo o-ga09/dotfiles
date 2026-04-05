@@ -1,6 +1,6 @@
 # dotfiles
 
-![header](./assets/header.png)
+![header](./assets/2026-04-05-16-55-50.png)
 
 taichi's personal dotfiles — managed as symlinks via `install.sh`.
 
