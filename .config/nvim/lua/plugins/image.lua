@@ -32,6 +32,10 @@ return {
     opts = {
       image = {
         enabled = true,
+        doc = {
+          enabled = true,   -- ドキュメント内の画像表示
+          inline = true,    -- バッファにインライン表示
+        },
       },
     },
   },
