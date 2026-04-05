@@ -59,6 +59,10 @@ alias docker-rm='docker system prune && rm -rf ~/Library/Containers/com.docker.d
 
 # ─── git-wt ───────────────────────────────────────────────────────────────────
 eval "$(git wt --init zsh)"
+git config wt.basedir "../{gitroot}-worktrees"
+git config --add wt.copy ".vscode/"
+git config --add wt.hook "npm install"
+git config --add wt.hook "go generate ./..."
 
 # ─── Prompt (Starship) ────────────────────────────────────────────────────────
 eval "$(starship init zsh)"
