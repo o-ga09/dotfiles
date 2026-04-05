@@ -1,20 +1,39 @@
-export PATH=/opt/homebrew/bin:$PATH
+# ─── Homebrew ─────────────────────────────────────────────────────────────────
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
-export PATH=/Users/taichi/.tiup/bin:$PATH
+# ─── Go ───────────────────────────────────────────────────────────────────────
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
 
-export PATH=/Users/taichi/.tiup/bin:$PATH
+# ─── Node (nodebrew) ──────────────────────────────────────────────────────────
+export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
-# bun completions
-[ -s "/Users/taichi/.bun/_bun" ] && source "/Users/taichi/.bun/_bun"
+# ─── Rust ─────────────────────────────────────────────────────────────────────
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# ─── Flutter ──────────────────────────────────────────────────────────────────
+export PATH="$HOME/development/flutter/bin:$PATH"
 
+# ─── OpenSSL (homebrew) ───────────────────────────────────────────────────────
+export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 
+# ─── Kubernetes ───────────────────────────────────────────────────────────────
+export KUBECONFIG="$HOME/k3s.yaml"
 
+# ─── Editor ───────────────────────────────────────────────────────────────────
+export EDITOR="nvim"
 
+# ─── Aliases ──────────────────────────────────────────────────────────────────
+alias ls='ls -FG'
+alias ll='ls -alFh'
 
+alias k='kubectl'
 
-
-
+alias gpl='git pull'
+alias gp='git push'
+alias gs='git status'
+alias gc='git checkout'
+alias gcm='git commit -m'
+alias gadd='git add'
+alias glog='git log --oneline'
+alias gitmerge='git merge'
