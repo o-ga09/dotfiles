@@ -10,6 +10,7 @@ return {
         use_absolute_path = false,
         relative_to_current_file = true,
         prompt_for_file_name = false,
+        copy_images = true,   -- ファイルパスではなく画像データをassetsにコピー
       },
       filetypes = {
         markdown = {
@@ -20,7 +21,8 @@ return {
       },
     },
     keys = {
-      { "<leader>p", "<cmd>PasteImage<cr>", desc = "Paste image from clipboard" },
+      -- ft を指定することで markdown バッファ以外では発火しない
+      { "<leader>p", "<cmd>PasteImage<cr>", ft = "markdown", desc = "Paste image from clipboard" },
     },
   },
 
