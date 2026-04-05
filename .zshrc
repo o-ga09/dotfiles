@@ -23,6 +23,21 @@ export KUBECONFIG="$HOME/k3s.yaml"
 # ─── Editor ───────────────────────────────────────────────────────────────────
 export EDITOR="nvim"
 
+# ─── pnpm ─────────────────────────────────────────────────────────────────────
+export PNPM_HOME="$HOME/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+# ─── Android SDK ──────────────────────────────────────────────────────────────
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
+
+# ─── TinyGo ───────────────────────────────────────────────────────────────────
+export PATH="$PATH:$HOME/.tinygo/bin"
+
 # ─── Aliases ──────────────────────────────────────────────────────────────────
 alias ls='ls -FG'
 alias ll='ls -alFh'
@@ -36,6 +51,14 @@ alias gc='git checkout'
 alias gcm='git commit -m'
 alias gadd='git add'
 alias glog='git log --oneline'
+alias gitmerge='git merge'
+alias docker-rm='docker system prune && rm -rf ~/Library/Containers/com.docker.docker/Data/vms'
+
+# ─── Kiro shell integration ───────────────────────────────────────────────────
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+
+# ─── git-wt ───────────────────────────────────────────────────────────────────
+eval "$(git wt --init zsh)"
 
 # ─── Prompt (Starship) ────────────────────────────────────────────────────────
 eval "$(starship init zsh)"

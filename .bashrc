@@ -15,5 +15,12 @@ alias gcm='git commit -m'
 alias gadd='git add'
 alias glog='git log --oneline'
 alias gitmerge='git merge'
+alias docker-rm='docker system prune && rm -rf ~/Library/Containers/com.docker.docker/Data/vms'
+
+# ─── Kiro shell integration ───────────────────────────────────────────────────
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path bash)"
+
+# ─── git-wt ───────────────────────────────────────────────────────────────────
+eval "$(git wt --init bash)"
 
 
