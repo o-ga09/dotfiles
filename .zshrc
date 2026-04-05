@@ -36,4 +36,6 @@ alias gc='git checkout'
 alias gcm='git commit -m'
 alias gadd='git add'
 alias glog='git log --oneline'
-alias gitmerge='git merge'
+
+# ─── Prompt (Starship) ────────────────────────────────────────────────────────
+eval "$(starship init zsh)"

@@ -37,8 +37,9 @@ symlink "$DOTFILES_DIR/.zshrc"        "$HOME/.zshrc"
 # ─── App configs (~/.config/) ────────────────────────────────────────────────
 mkdir -p "$HOME/.config"
 
-symlink "$DOTFILES_DIR/.config/nvim"    "$HOME/.config/nvim"
-symlink "$DOTFILES_DIR/.config/ghostty" "$HOME/.config/ghostty"
-symlink "$DOTFILES_DIR/.config/lazygit" "$HOME/.config/lazygit"
+symlink "$DOTFILES_DIR/.config/nvim"      "$HOME/.config/nvim"
+symlink "$DOTFILES_DIR/.config/ghostty"   "$HOME/.config/ghostty"
+symlink "$DOTFILES_DIR/.config/lazygit"   "$HOME/.config/lazygit"
+symlink "$DOTFILES_DIR/.config/starship.toml" "$HOME/.config/starship.toml"
 
 info "All done! 🎉"

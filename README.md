@@ -12,7 +12,8 @@ dotfiles/
 ├── .config/
 │   ├── nvim/          # Neovim (LazyVim-based)
 │   ├── ghostty/       # Ghostty terminal emulator
-│   └── lazygit/       # Lazygit TUI git client
+│   ├── lazygit/       # Lazygit TUI git client
+│   └── starship.toml  # Starship prompt
 └── install.sh         # Symlink installer
 ```
 
@@ -20,6 +21,7 @@ dotfiles/
 
 | Tool | Install |
 |------|---------|
+| [Starship](https://starship.rs/) | `brew install starship` |
 | [Neovim](https://neovim.io/) `>= 0.9` | `brew install neovim` |
 | [Ghostty](https://ghostty.org/) | <https://ghostty.org/download> |
 | [Lazygit](https://github.com/jesseduffield/lazygit) | `brew install lazygit` |

@@ -1,21 +1,5 @@
-# ─── Prompt ───────────────────────────────────────────────────────────────────
-function parse_git_branch {
-    git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
-}
-
-function set_prompt {
-    local BLUE="\[\e[1;34m\]"
-    local GREEN="\[\e[1;32m\]"
-    local WHITE="\[\e[00m\]"
-
-    case $TERM in
-        xterm*) TITLEBAR='\[\e]0;\W\007\]';;
-        *)      TITLEBAR="";;
-    esac
-
-    PS1="${TITLEBAR}${GREEN}\u@\h${WHITE}:${BLUE}\W${GREEN}\$(parse_git_branch)${BLUE}\$${WHITE} "
-}
-set_prompt
+# ─── Prompt (Starship) ────────────────────────────────────────────────────────
+eval "$(starship init bash)"
 
 # ─── Aliases ──────────────────────────────────────────────────────────────────
 alias ls='ls -FG'
