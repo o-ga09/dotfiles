@@ -1,5 +1,7 @@
 # dotfiles
 
+![header](./assets/header.png)
+
 taichi's personal dotfiles — managed as symlinks via `install.sh`.
 
 ## Structure
@@ -19,13 +21,13 @@ dotfiles/
 
 ## Requirements
 
-| Tool | Install |
-|------|---------|
-| [Starship](https://starship.rs/) | `brew install starship` |
-| [Neovim](https://neovim.io/) `>= 0.9` | `brew install neovim` |
-| [Ghostty](https://ghostty.org/) | <https://ghostty.org/download> |
-| [Lazygit](https://github.com/jesseduffield/lazygit) | `brew install lazygit` |
-| [delta](https://github.com/dandavison/delta) (for lazygit pager) | `brew install git-delta` |
+| Tool                                                             | Install                        |
+| ---------------------------------------------------------------- | ------------------------------ |
+| [Starship](https://starship.rs/)                                 | `brew install starship`        |
+| [Neovim](https://neovim.io/) `>= 0.9`                            | `brew install neovim`          |
+| [Ghostty](https://ghostty.org/)                                  | <https://ghostty.org/download> |
+| [Lazygit](https://github.com/jesseduffield/lazygit)              | `brew install lazygit`         |
+| [delta](https://github.com/dandavison/delta) (for lazygit pager) | `brew install git-delta`       |
 
 ## Install
 
@@ -50,10 +52,10 @@ Based on [LazyVim](https://www.lazyvim.org/) starter.
 
 **Custom plugins:**
 
-| Plugin | Purpose |
-|--------|---------|
-| `xiyaowong/transparent.nvim` | Background transparency |
-| `HakonHarnes/img-clip.nvim` | Paste images from clipboard |
+| Plugin                        | Purpose                            |
+| ----------------------------- | ---------------------------------- |
+| `xiyaowong/transparent.nvim`  | Background transparency            |
+| `HakonHarnes/img-clip.nvim`   | Paste images from clipboard        |
 | `folke/snacks.nvim` (lazygit) | Lazygit integration (`<leader>gg`) |
 
 ## Ghostty
