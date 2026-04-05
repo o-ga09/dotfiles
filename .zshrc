@@ -18,7 +18,7 @@ export PATH="$HOME/development/flutter/bin:$PATH"
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 
 # ─── Kubernetes ───────────────────────────────────────────────────────────────
-export KUBECONFIG="$HOME/k3s.yaml"
+# KUBECONFIG defaults to ~/.kube/config
 
 # ─── Editor ───────────────────────────────────────────────────────────────────
 export EDITOR="nvim"
