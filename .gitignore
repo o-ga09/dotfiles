@@ -1,0 +1,3 @@
+# Machine-specific / secret zsh configs
+.config/zsh/hidden/*
+!.config/zsh/hidden/.gitkeep

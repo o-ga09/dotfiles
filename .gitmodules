@@ -1,0 +1,3 @@
+[submodule ".config/zsh/zeno.zsh"]
+	path = .config/zsh/zeno.zsh
+	url = https://github.com/yuki-yano/zeno.zsh.git
