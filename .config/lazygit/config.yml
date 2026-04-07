@@ -29,3 +29,44 @@ keybinding:
   universal:
     quit: q
     quit-alt1: <c-c>
+
+customCommands:
+  # ── PR レビュー (localBranches パネルで使用) ──────────────────────────────
+  # K: gh pr list を fzf で選択して checkout
+  - key: "K"
+    description: "PR checkout (fzf)"
+    command: "gh pr list | fzf --preview 'gh pr view {1}' | awk '{print $1}' | xargs -I{} gh pr checkout {}"
+    context: "localBranches"
+    subprocess: true
+
+  # V: 現在のブランチの PR をブラウザで開く
+  - key: "V"
+    description: "PR をブラウザで開く"
+    command: "gh pr view --web"
+    context: "localBranches"
+    subprocess: false
+
+  # A: PR を Approve
+  - key: "A"
+    description: "PR を Approve"
+    command: "gh pr review --approve"
+    context: "localBranches"
+    subprocess: true
+
+  # W: PR に変更リクエスト (コメント入力あり)
+  - key: "W"
+    description: "PR に変更リクエスト"
+    prompts:
+      - type: input
+        title: "変更リクエストのコメント"
+        key: Comment
+    command: "gh pr review --request-changes -b '{{.Form.Comment}}'"
+    context: "localBranches"
+    subprocess: true
+
+  # C: 現在のブランチから PR を作成 (ブラウザで開く)
+  - key: "C"
+    description: "PR を作成 (ブラウザ)"
+    command: "gh pr create --web"
+    context: "localBranches"
+    subprocess: false
